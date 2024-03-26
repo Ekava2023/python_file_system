@@ -10,8 +10,8 @@ def change_row():
         number_row = int(input(f"Ошибка!"
                                f"Введите номер строки "
                                f"от 1 до {count_rows}: "))
-    name = input("Введите свое имя: ")
-    surname = input("Введите свою фамилию: ")
+    name = input("Введите имя: ")
+    surname = input("Введите фамилию: ")
     birthdate = input("Введите дату рождения: ")
     town = input("Введите город: ")
     data[number_row - 1] = f'{number_row};{name};{surname};{birthdate};{town}\n'

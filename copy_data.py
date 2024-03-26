@@ -14,11 +14,12 @@ def copy_row():
                                    f"Введите номер строки "
                                    f"от 1 до {count_rows}: "))
         row_to_copy = data[number_row - 1].split(";")
-        print("Выберите файл КУДА скопировать:")
+        print("\n Выберите файл КУДА скопировать:")
         data2, nf2 =  data_file()
+        count_rows2 = len(data2)
         with open(f'db/data_{nf2}.txt', 'a', encoding='utf-8') as file:
-            file.write(f'{number_row};{row_to_copy[1]};'
+            file.write(f'{count_rows2+1};{row_to_copy[1]};'
                    f'{row_to_copy[2]};{row_to_copy[3]};{row_to_copy[4]}\n')
         print("Данные успешно скопированы!")
 
-copy_row()      
+     
